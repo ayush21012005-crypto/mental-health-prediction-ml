@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mental Health Predictor</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="background-circle circle-one"></div>
+
+    <div class="background-circle circle-two"></div>
+
+
+    <main class="page-container">
+
+
+        <!-- HEADER -->
+
+        <section class="hero">
+
+            <div class="hero-icon">
+                🧠
+            </div>
+
+            <div>
+
+                <p class="eyebrow">
+                    MACHINE LEARNING
+                </p>
+
+                <h1>
+                    Mental Health Predictor
+                </h1>
+
+                <p class="subtitle">
+
+                    Analyze lifestyle, academic and
+                    social-media patterns to estimate
+                    a mental health score.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAIN CARD -->
+
+        <section class="main-card">
+
+
+            <form id="predictionForm">
+
+
+                <!-- PERSONAL INFORMATION -->
+
+                <div class="section-header">
+
+                    <div class="section-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Personal Information
+                        </h2>
+
+                        <p>
+                            Tell us a little about yourself.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <!-- AGE -->
+
+                    <div class="form-group">
+
+                        <label for="age">
+                            Age
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            min="0"
+                            max="100"
+                            placeholder="Enter your age"
+                            required
+                        >
+
+                        <small>
+                            Age must be between 0 and 100.
+                        </small>
+
+                    </div>
+
+
+                    <!-- GENDER -->
+
+                    <div class="form-group">
+
+                        <label for="gender">
+                            Gender
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="gender"
+                            required
+                        >
+
+                            <option value="">
+                                Select gender
+                            </option>
+
+                            <option value="Male">
+                                Male
+                            </option>
+
+                            <option value="Female">
+                                Female
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- COUNTRY -->
+
+                    <div class="form-group">
+
+                        <label for="country">
+                            Country
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="country"
+                            required
+                        >
+
+                            <option value="">
+                                Select country
+                            </option>
+
+                            <option value="India">
+                                India
+                            </option>
+
+                            <option value="USA">
+                                USA
+                            </option>
+
+                            <option value="Canada">
+                                Canada
+                            </option>
+
+                            <option value="Australia">
+                                Australia
+                            </option>
+
+                            <option value="UK">
+                                UK
+                            </option>
+
+                            <option value="Germany">
+                                Germany
+                            </option>
+
+                            <option value="Mexico">
+                                Mexico
+                            </option>
+
+                            <option value="Turkey">
+                                Turkey
+                            </option>
+
+                            <option value="France">
+                                France
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ACADEMIC LEVEL -->
+
+                    <div class="form-group">
+
+                        <label for="academic_level">
+                            Academic Level
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="academic_level"
+                            required
+                        >
+
+                            <option value="">
+                                Select academic level
+                            </option>
+
+                            <option value="High School">
+                                High School
+                            </option>
+
+                            <option value="Undergraduate">
+                                Undergraduate
+                            </option>
+
+                            <option value="Graduate">
+                                Graduate
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div class="section-header">
+
+                    <div class="section-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Social Media Usage
+                        </h2>
+
+                        <p>
+                            Tell us about your digital habits.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <!-- PLATFORM -->
+
+                    <div class="form-group">
+
+                        <label for="most_used_platform">
+                            Most Used Platform
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="most_used_platform"
+                            required
+                        >
+
+                            <option value="">
+                                Select platform
+                            </option>
+
+                            <option>Facebook</option>
+                            <option>LinkedIn</option>
+                            <option>Instagram</option>
+                            <option>Snapchat</option>
+                            <option>Twitter</option>
+                            <option>YouTube</option>
+                            <option>TikTok</option>
+                            <option>LINE</option>
+                            <option>KakaoTalk</option>
+                            <option>VKontakte</option>
+                            <option>WhatsApp</option>
+                            <option>WeChat</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- PURPOSE -->
+
+                    <div class="form-group">
+
+                        <label for="purpose_of_use">
+                            Purpose of Use
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="purpose_of_use"
+                            required
+                        >
+
+                            <option value="">
+                                Select purpose
+                            </option>
+
+                            <option>
+                                Networking
+                            </option>
+
+                            <option>
+                                Education
+                            </option>
+
+                            <option>
+                                Entertainment
+                            </option>
+
+                            <option>
+                                News
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DAILY USAGE -->
+
+                    <div class="form-group">
+
+                        <label for="avg_daily_usage_hours">
+                            Average Daily Usage
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="avg_daily_usage_hours"
+                                min="0"
+                                max="24"
+                                step="0.1"
+                                placeholder="e.g. 5.5"
+                                required
+                            >
+
+                            <span>
+                                hours
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- UNLOCKS -->
+
+                    <div class="form-group">
+
+                        <label for="daily_unlocks">
+                            Daily Phone Unlocks
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="daily_unlocks"
+                                min="0"
+                                placeholder="e.g. 50"
+                                required
+                            >
+
+                            <span>
+                                /day
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LIFESTYLE -->
+
+                <div class="section-header">
+
+                    <div class="section-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Lifestyle & Wellbeing
+                        </h2>
+
+                        <p>
+                            Provide your daily lifestyle information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <!-- STUDY -->
+
+                    <div class="form-group">
+
+                        <label for="study_hours">
+                            Study Hours
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="study_hours"
+                                min="0"
+                                max="24"
+                                step="0.1"
+                                placeholder="e.g. 3"
+                                required
+                            >
+
+                            <span>
+                                hours/day
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHYSICAL ACTIVITY -->
+
+                    <div class="form-group">
+
+                        <label for="physical_activity_hours">
+                            Physical Activity
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="physical_activity_hours"
+                                min="0"
+                                max="24"
+                                step="0.1"
+                                placeholder="e.g. 1"
+                                required
+                            >
+
+                            <span>
+                                hours/day
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SLEEP -->
+
+                    <div class="form-group">
+
+                        <label for="sleep_hours_per_night">
+                            Sleep Per Night
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="sleep_hours_per_night"
+                                min="0"
+                                max="24"
+                                step="0.1"
+                                placeholder="e.g. 7"
+                                required
+                            >
+
+                            <span>
+                                hours
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STRESS -->
+
+                    <div class="form-group">
+
+                        <label for="stress_level">
+                            Stress Level
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="stress_level"
+                            required
+                        >
+
+                            <option value="">
+                                Select stress level
+                            </option>
+
+                            <option value="Low">
+                                Low
+                            </option>
+
+                            <option value="Medium">
+                                Medium
+                            </option>
+
+                            <option value="High">
+                                High
+                            </option>
+
+                            <option value="Very High">
+                                Very High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ERROR -->
+
+                <div
+                    id="errorBox"
+                    class="error-box">
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    id="predictButton"
+                    class="predict-button"
+                >
+
+                    <span id="buttonText">
+                        Predict Mental Health Score
+                    </span>
+
+                    <span
+                        id="loader"
+                        class="loader">
+                    </span>
+
+                </button>
+
+
+            </form>
+
+
+            <!-- RESULT -->
+
+            <section
+                id="resultCard"
+                class="result-card hidden"
+            >
+
+                <div class="result-icon">
+                    ✨
+                </div>
+
+                <p class="result-label">
+                    YOUR PREDICTED SCORE
+                </p>
+
+                <div
+                    id="score"
+                    class="score"
+                >
+                    --
+                </div>
+
+                <p class="result-description">
+                    Predicted Mental Health Score
+                </p>
+
+                <div class="result-divider">
+                </div>
+
+                <p class="result-note">
+
+                    This prediction is generated by your
+                    machine learning model based on the
+                    information provided.
+
+                </p>
+
+                <button
+                    type="button"
+                    id="newPrediction"
+                    class="secondary-button"
+                >
+
+                    Make Another Prediction
+
+                </button>
+
+            </section>
+
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>
+                🧠 Machine Learning Project
+            </span>
+
+            <span>
+                FastAPI + Python + JavaScript
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
